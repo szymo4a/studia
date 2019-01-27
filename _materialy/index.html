@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <link rel='stylesheet' type='text/css' href='style.css' />
+    <meta charset='utf-8' />
+    <title>Hello</title>
+
+    <script src="js2.js"></script>
+    <script src="js3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+
+        <div class="box">
+            <div id="test" onclick="interactiveInput()">Hello world</div>
+            <h1>That's a heading 1</h1>
+            <p>
+                That's a paragraph!
+            </p>
+
+            <input type='text' id='input1' />
+            <p id="linia1"></p>
+
+            <script>
+                const interactiveInput = () => {	
+					let input = document.getElementById('input1').value;
+					const linia = document.getElementById('linia1');
+					linia.innerHTML = input;
+					}
+				</script>
+
+            <p id="linia2"></p>
+
+            <script>
+                const napis1 = 'Linia 1 w JS';
+					const napis2 = 'Linia 2 w JS';
+					document.getElementById('linia2').innerHTML = `${napis1} oraz ${napis2}`;
+				</script>
+
+            <p id="linia3"></p>
+
+            <script>
+                let date1 = new Date();
+					let hours1 = date1.getHours();
+					let minutes1 = date1.getMinutes();
+					let day1 = date1.getDate();
+					let month1 = date1.getMonth();
+					let year1 = date1.getFullYear();
+					let monthT = ['Styczen', 'Luty', 'Marzec', 'Kwiecien', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpien', 'Wrzesien', 'Pazdziernik', 'Listopad', 'grudzien'];
+					let month2 = monthT[month1];
+					document.getElementById('linia3').innerHTML = `Jest ${hours1}:${minutes1}, ${day1}/${month2}/${year1}`;
+				</script>
+        </div>
+
+        <div class="box">
+            <p id="kolorP"></p>
+
+            <script>
+                let kolorT = ["red", "green", "blue"];
+					kolorT.push("white");
+					kolorT[kolorT.length] = "black";
+					let koloryAll = '';
+					for (let i=0; i<kolorT.length; i++) {
+						koloryAll += `${kolorT[i]} `;
+					}
+					document.getElementById('kolorP').innerHTML = koloryAll;
+				</script>
+
+            <img id="kotek" src="kot1.jpg" style="height: 200px; width: 200px; cursor: crosshair" />
+            <div id="kotoPrzycisk" onmouseover="document.getElementById('kotek').src='kot2.jpg'" onmouseout="document.getElementById('kotek').src='kot1.jpg'">Meow!</div>
+
+            <div class="interactive2" onclick="interactiveInput2()">*Klik*</div>
+            <div class="interactive2" onclick="interactiveColor()">*Color!*</div>
+            <input id="newInput" type="text" />
+            <p id="newOutput" style="display: block;"></p>
+
+            <script>
+                const interactiveInput2 = () => {	
+				let inputN = document.getElementById('newInput').value;
+				const liniaN = document.getElementById('newOutput');
+				liniaN.innerHTML = inputN;
+				}
+			</script>
+
+
+            <script>
+                const interactiveColor = () => {
+					const liniaNColor = document.getElementById('newOutput');
+					let newColor = Math.floor(Math.random()*7);
+					const colors = ['red', 'blue', 'green', 'yellow', 'magenta', 'aqua', 'darkgreen'];
+					liniaNColor.style.color = colors[newColor];
+				}
+			</script>
+
+        </div>
+
+        <div class="box">
+            Calculator v1.5<br>
+            <input id="calcInputA" class="calcInput" type="number" />
+            <input id="calcInputB" class="calcInput" type="number" />
+            <div onclick="Calc('+')" class="calcButton">+</div>
+            <div onclick="Calc('-')" class="calcButton">-</div>
+            <div onclick="Calc('*')" class="calcButton">*</div>
+            <div onclick="Calc('/')" class="calcButton">/</div>
+            <div onclick="Calc('^')" class="calcButton">^</div>
+            <p id="calcResultP">Result: <span id="calcResult"></span></p>
+            <script>
+                const Calc = (operation) => {
+						let numberA = parseFloat(document.getElementById('calcInputA').value);
+						let numberB = parseFloat(document.getElementById('calcInputB').value);
+						let result;
+						let resultSpan = document.getElementById('calcResult');
+						switch(operation) {
+						case '+':
+							result = numberA + numberB;
+							break;
+						case '-':
+							result = numberA - numberB;
+							break;
+						case '*':
+							result = numberA * numberB;
+							break;
+						case '/':
+							if (numberB){
+									result = numberA / numberB;
+								} else {
+									result = 'Nie dziel przez 0!';
+								}
+							break;
+						case '^':
+							result = Math.pow(numberA, numberB);
+							break;
+						default:
+							result = '3RR0R';
+						}
+						if (result >= 0.0) {
+							resultSpan.style.color = 'lightgreen';
+						} else {
+							resultSpan.style.color = '#FF6666';
+						}
+					resultSpan.innerHTML = result;
+					}
+				</script>
+            <br>
+            <p>Div migający:</p>
+            <div id="epilepsy"></div>
+            <div id="stopEp">x</div>
+            <script src="js1.js"></script>
+            <br>
+            <br>
+            <p id="linia4"></p>
+            <script>
+                let intervalDate = setInterval(function(){newDateSecond();}, 1000);
+					const newDateSecond = () => { 
+						let date1 = new Date();
+						let hours1 = date1.getHours();
+						let minutes1 = date1.getMinutes();
+						let day1 = date1.getDate();
+						let month1 = date1.getMonth();
+						let year1 = date1.getFullYear();
+						let seconds1 = date1.getSeconds();
+						let monthT = ['Styczen', 'Luty', 'Marzec', 'Kwiecien', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpien', 'Wrzesien', 'Pazdziernik', 'Listopad', 'grudzien'];
+						let month2 = monthT[month1];
+						document.getElementById('linia4').innerHTML = `Jest ${hours1}:${minutes1}:${seconds1}, ${day1}/${month2}/${year1}`;
+					}
+				</script>
+        </div>
+
+        <div class="box">
+            <div id="panel">
+                Change size:
+                <input id="boxSize" type="number" />
+                <div id="reSize">*Click!*</div>
+                </br>
+                Change colour:
+                <select id="reColour">
+                    <option value="transparent">none</option>
+                    <option value="darkorange">darkorange</option>
+                    <option value="aqua">aqua</option>
+                    <option value="gold">gold</option>
+                    <option value="pink">pink</option>
+                </select>
+                <div id="vanish">*Vanish!*</div>
+            </div>
+            <div id="box1"></div>
+        </div>
+
+        <div class="box">
+            <!-- jQuery lol -->
+            <h1 id="queryH1">Test</h1>
+            <div id="queryChangeH1">Change!</div>
+            <hr>
+            </hr>
+            <h2>Losowanie Lotto!</h2>
+            <div id="lottoDiv">Losuj!</div>
+            <span class="lottoSpan" id="lottoSpan1">0</span>
+            <span class="lottoSpan" id="lottoSpan2">0</span>
+            <span class="lottoSpan" id="lottoSpan3">0</span>
+            <span class="lottoSpan" id="lottoSpan4">0</span>
+            <span class="lottoSpan" id="lottoSpan5">0</span>
+            <span class="lottoSpan" id="lottoSpan6">0</span>
+            <hr>
+            </hr>
+            <!-- kod wyżej boli, jest bardzo nieefektywny i ma błędy -->
+
+            <script>
+                $('h1#queryH1').html('Welcome!');
+                const TableText = ['Welcome!', 'Hello!', 'Ohayo!', ':3', '>.<', '\\(o_o)/'];
+                const randomText = () => {
+                    let random = Math.floor(Math.random() * 6);
+                    console.log(random);
+                    $('h1#queryH1').html(TableText[random]);
+                }
+                $('div#queryChangeH1').on('click', randomText);
+            </script>
+            <script>
+                const Lotto = () => {
+                    let random1 = Math.ceil(Math.random() * 41);
+                    let random2 = Math.ceil(Math.random() * 41);
+                    let random3 = Math.ceil(Math.random() * 41);
+                    let random4 = Math.ceil(Math.random() * 41);
+                    let random5 = Math.ceil(Math.random() * 41);
+                    let random6 = Math.ceil(Math.random() * 41);
+                    $('span#lottoSpan1').html(random1);
+                    $('span#lottoSpan2').html(random2);
+                    $('span#lottoSpan3').html(random3);
+                    $('span#lottoSpan4').html(random4);
+                    $('span#lottoSpan5').html(random5);
+                    $('span#lottoSpan6').html(random6);
+                }
+                $('div#lottoDiv').on('click', Lotto);
+            </script>
+        </div>
+        <div class="box">
+            <span id="fruit1span"></span>
+            <script>
+                let fruit1span = document.getElementById('fruit1span');
+                fruit1span.innerHTML = fruit1.properties();
+            </script>
+        </div>
+    </div>
+</body>
+</html>

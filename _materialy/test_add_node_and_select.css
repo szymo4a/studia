@@ -1,0 +1,19 @@
+.normalLine {
+	font-family : Helvetica, sans-serif;
+}
+
+.selectedLine {
+	color : blue;
+	border : solid 1px red;
+}
+
+.selectedWord {
+	font-weight : bold;
+}
+
+#textArea {
+	min-width: 300px;
+	max-width: 1000px;
+	min-height: 100px;
+	resize: horizontal;
+}

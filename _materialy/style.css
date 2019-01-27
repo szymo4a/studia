@@ -1,0 +1,170 @@
+#test {
+	color: #FFF;
+	margin: 10px auto 10px auto;
+	background-color: #000;
+	width: 200px;
+	text-align: center;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	transition: 1s;
+	text-shadow: 1px 1px 23px rgba(0, 0, 0, 1);
+}
+
+#test:hover {
+	background-color: darkorange;
+	transition: 1s;
+	padding: 0 50px;
+	cursor: pointer;
+}
+
+#container {
+	margin: auto;
+	height: auto;
+	width: 1124px;
+}
+
+.box {
+	width: 500px;
+	height: 500px;
+	background-color: lightgray;
+	border: 1px solid #000;
+	margin: 10px;
+	float: left;
+	padding: 20px;
+	color: #FFF;
+	font-weight: bold;
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+}
+
+#kotoPrzycisk {
+	width: 150px;
+	height: 50px;
+	background-color: rgba(0,0,0,0.5);
+	line-height: 50px;
+	text-align: center;
+	font-size: 2em;
+	cursor: default;
+	transition: 1s;
+	margin-bottom: 40px;
+}
+
+#kotoPrzycisk:hover {
+	transition: 1s;
+	background-color: rgba(0,0,0,1);
+}
+
+.interactive2 {
+	width: 100px;
+	height: 30px;
+	background-color: #BBB;
+	margin-left: 30px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#newOutput {
+	font-size: 2em;
+}
+
+.calcInput {
+	width: 100px;
+}
+
+.calcButton{
+	width: 20px;
+	height: 20px;
+	line-height: 10px;
+	padding: 5px;
+	background-color: #A1A1A1;
+	text-align: center;
+	border: 1px solid #000000;
+	font-size: 15px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+#calcResultP {
+	width: 100%;
+	font-size: 20px;
+	border-bottom: 1px solid #000000;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+#epilepsy {
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	transition: 2s;
+}
+
+#stopEp {
+	width: 30px;
+	height: 30px;
+	border: 1px solid black;
+	text-align: center;
+	margin: 5px;
+	line-height: 30px;
+	cursor: pointer;
+	display: none;
+}
+
+#box1 {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin: 50px auto 0 auto;
+	border: 1px dashed #000;
+	max-width: 350px;
+	max-height: 350px;	
+}
+
+#panel {
+	width: 100%;
+	height: 59px;
+	border-bottom: 1px solid #000;
+	padding: 20px 0;
+}
+
+#reSize {
+	cursor: pointer;
+	background-color: #444;
+	border: 1px solid #000;
+	display: inline;
+	padding: 2px;
+	margin: 5px;
+}
+
+#vanish{
+	padding: 2px;
+	border: 3px dotted black;
+	cursor: pointer;
+	margin-top: 10px;
+	display: inline-block;
+}
+
+#queryChangeH1 {
+	cursor: pointer;
+}
+
+#lottoDiv {
+	color: #FFF;
+	background-color: #000;
+	width: 80px;
+	text-align: center;
+	height: 80px;
+	line-height: 80px;
+	font-size: 20px;
+	text-shadow: 1px 1px 23px rgba(0, 0, 0, 1);
+	cursor: pointer;
+	border: 2px solid #fff;
+	border-radius: 100%;
+	display: inline-block;
+}
+
+.lottoSpan {
+	margin-left: 10px;
+	font-size: 25px;
+}

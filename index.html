@@ -1,0 +1,93 @@
+﻿<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Strona by Szymon Krawczyk" />
+    <link rel="stylesheet" type="text/css" href="css/style/style.css" />
+    <link rel="icon" href="media/icon.png" type="image/png" />
+    <title>Aplikacje Internetowe</title>
+</head>
+
+<body>
+    <div id="clock">00:00:00 | 00/00/0000</div>
+    <div id="container">
+        <div class="content">
+            <h2 class="title">1) Operacje na tekście</h2>
+            <div class="js-content first">
+                <textarea id="input_1"></textarea>
+                <div class="hold">
+                    <div class="clickyButton" id="addNode">Kilknij, aby wstawić tekst</div>
+                    <div class="clickyButton" id="addNodeBefore">Kilknij, aby wstawić tekst przed:</div>
+                    <select class="clickyButton" id="selectP"></select>
+                    <div class="clickyButton" id="deleteNode">Kilknij, aby usunąć zaznaczoną linię</div>
+                </div>
+                <div id="pContainer"></div>
+            </div>
+            <div class="comment">
+                Wstawianie i usuwanie akapitów z tekstem
+            </div>
+        </div>
+        <div class="content">
+            <h2 class="title">2) Kalkulator</h2>
+            <div class="js-content second">
+                <input id="calcA" class="calcInput" type="number" />
+                <input id="calcB" class="calcInput" type="number" />
+                <div onclick="calc('+')" class="clickyButton">&plus;</div>
+                <div onclick="calc('-')" class="clickyButton">&minus;</div>
+                <div onclick="calc('*')" class="clickyButton">&times;</div>
+                <div onclick="calc('/')" class="clickyButton">&divide;</div>
+                <div onclick="calc('^')" class="clickyButton">^</div>
+                <p id="calcResultP">Wynik: <span id="calcResult"></span></p>
+            </div>
+            <div class="comment">
+                Prosty kalkulator z ochroną przed dzieleniem przez 0</div>
+        </div>
+        <div class="content">
+            <h2 class="title">3) Pudełko</h2>
+            <div class="js-content third">
+                <div class="div3_controls">
+                    <div class="div_3_nav_wrapper">
+                        <div class="div_3_nav"></div>
+                        <div class="div_3_nav arr" onclick="moveDiv_3('up')">&uarr;</div>
+                        <div class="div_3_nav"></div>
+                        <div class="div_3_nav arr" onclick="moveDiv_3('left')">&larr;</div>
+                        <div class="div_3_nav arr" onclick="moveDiv_3('reset')">&#9856;</div>
+                        <div class="div_3_nav arr" onclick="moveDiv_3('right')">&rarr;</div>
+                        <div class="div_3_nav"></div>
+                        <div class="div_3_nav arr" onclick="moveDiv_3('down')">&darr;</div>
+                        <div class="div_3_nav"></div>
+                    </div>
+                    <div class="div3_colour_controls_wrapper">
+                        <div class="clickyButton div_3_colour_button" id="startColour">&#9787;</div>
+                        <div class="clickyButton div_3_colour_button" id="stopColour">&#9786;</div>
+                        <div class="clickyButton div_3_colour_button" id="vanish">&#9729;</div>
+                    </div>
+                </div>
+                <div id="div3_wrapper">
+                    <div id="div3"></div>
+                </div>
+            </div>
+            <div class="comment">
+                &uarr;, &rarr;, &larr;, &darr; - sterowanie<br>
+                &#9856; - powrót na pozycję początkową<br>
+                &#9787; - włączenie zmiany kolorów<br>
+                &#9786; - wyłączenie zmiany kolorów<br>
+                &#9729; - zniknięcie pudełka<br>
+            </div>
+        </div>
+        <!--
+            <div class="content">
+                <h2 class="title">Title example</h2>
+                <div class="js-content">Example code</div>
+                <div class="comment">Commenting.... *Typing...*</div>
+            </div>
+        -->
+    </div>
+</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="JavaScript/clock.js"></script>
+    <script src="JavaScript/text.js"></script>
+    <script src="JavaScript/calc.js"></script>
+    <script src="JavaScript/pulsingDiv.js"></script>
+</html>

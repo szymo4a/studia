@@ -1,0 +1,259 @@
+﻿@import '../variables/variables';
+@import '../mixins/mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $main-font;
+}
+
+body {
+    @include image-background($body-background);
+    cursor: default;
+}
+
+textarea {
+    background: $content-background;
+    border: $content-border;
+    height: 200px;
+    max-height: 400px;
+    min-height: 100px;
+    min-width: 200px;
+    overflow-y: scroll;
+    padding: 5px;
+    resize: vertical;
+    width: 400px;
+
+    @include font(white, 20px);
+}
+
+#container {
+    background: $main-background;
+    border-radius: $main-width / 50;
+    margin: 50px;
+    padding: 10px 40px;
+    width: $main-width;
+
+    @include margin-center;
+}
+
+.content {
+    background-color: $content-background;
+    border: $content-border;
+    border-radius: $content-width / 100;
+    margin: 30px 0;
+    padding: 19px;
+    width: $content-width;
+
+    .title {
+        border-bottom: $title-border;
+        display: block;
+        padding: 0 0 5px 25px;
+
+        @include font(white, 40px, true);
+    }
+
+    .js-content {
+        display: block;
+        margin-top: 15px;
+        overflow: hidden;
+
+        @include font(white, 22px);
+    }
+
+    .comment {
+        border-top: $content-border;
+        display: block;
+        margin-top: 19px;
+        padding: 10px 0 10px 0;
+
+        @include font(#FAFAFA, 18px);
+    }
+}
+
+#clock {
+    background-color: $content-background;
+    border: $content-border;
+    border-radius: 10px;
+    padding: 19px;
+    position: fixed;
+    right: 40px;
+
+    @include font(white, 17px);
+}
+
+.clickyButton {
+    background-color: $content-background;
+    border: $content-border;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 15px;
+    transition: 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        filter: invert(100%);
+        transition: 0.2s;
+    }
+}
+
+.first {
+
+    #input_1 {
+        min-height: 200px;
+        height: 200px;
+    }
+
+    .hold {
+        display: inline-block;
+        margin-left: 15px;
+        width: 50%;
+
+        #selectP {
+            wifth: 50px;
+            @include font(white, 20px);
+        }
+    }
+
+    .clickyButton {
+        margin: 1px;
+        float: left;
+        @include margin-center;
+    }
+
+    #pContainer {
+        margin-top: 10px;
+
+        .normalLine {
+            margin-left: 5px;
+
+            &:hover {
+                cursor: text;
+            }
+        }
+
+        .selectedLine {
+            text-decoration: underline;
+            text-decoration-color: chartreuse;
+        }
+    }
+}
+
+.second {
+
+    .calcInput {
+        background-color: $content-background;
+        border: $content-border;
+        text-align: right;
+        width: 120px;
+        @include font(white, 40px, true);
+    }
+
+    .clickyButton {
+        position: relative;
+        left: 15px;
+        text-align: center;
+        width: 30px;
+        @include font(white, 25px);
+    }
+
+    #calcResultP {
+        margin-top: 20px;
+        @include font(white, 35px, true);
+    }
+
+    #calcResult {
+        @include font($size: 40px);
+    }
+}
+
+.third {
+    .div3_controls {
+        height: 75px;
+        width: 450px;
+        @include margin-center;
+
+        .div_3_nav_wrapper {
+            display: inline-block;
+            float: left;
+            height: inherit;
+            width: 75px;
+        }
+
+        .div_3_nav {
+            height: 25px;
+            float: left;
+            line-height: 25px;
+            text-align: center;
+            width: 25px;
+        }
+
+        .arr {
+            color: #EEE;
+
+            &:hover {
+                color: #FFF;
+                cursor: pointer;
+                transition: 0.1s;
+                transform: scale(1.2);
+            }
+        }
+
+        .div3_colour_controls_wrapper {
+            display: inline-block;
+            float: right;
+            height: inherit;
+            width: 375px;
+
+            .div_3_colour_button {
+                border: $content-border;
+                float: right;
+                height: 40px;
+                line-height: 40px;
+                margin: 5px;
+                padding: 5px;
+                text-align: center;
+                width: 40px;
+
+                @include font(#eee, 40px);
+
+                &:hover {
+                    color: #FFF;
+                    cursor: pointer;
+                    transition: 0.40s;
+                    filter: invert(85%);
+                }
+            }
+
+            #vanish {
+                transition: 1s;
+            }
+        }
+    }
+
+    #div3_wrapper {
+        border: $content-border;
+        height: 672px;
+        margin-top: 15px;
+        overflow: hidden;
+        width: 70%;
+        @include margin-center;
+
+
+
+        #div3 {
+            background-color: transparent;
+            border: 3px dashed white;
+            height: 166px;
+            left: 250px;
+            max-height: 250px;
+            max-width: 250px;
+            min-height: 100px;
+            min-width: 100px;
+            position: relative;
+            top: 250px;
+            transition: 0.5s;
+            width: 166px;
+        }
+    }
+}

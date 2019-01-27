@@ -1,0 +1,278 @@
+/* 
+@mixin background-stripes ($degrees: 45deg, $color1: #606dbc, $width1: 10px, $color2: #606dbc, $width2: 10px, $width3: 50px, $opacity: 1) {
+    background: repeating-linear-gradient(
+                    $degrees,
+                    $color1,
+                    $color1 $width1,
+                    $color2 $width2,
+                    $color2 $width3
+                );
+        opacity: $opacity;
+}
+*/
+/* line 4, E:/IT/Websites/_studia/scss/style/style.scss */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Calibri", sanf-serif; }
+
+/* line 10, E:/IT/Websites/_studia/scss/style/style.scss */
+body {
+  background-image: url("../../media/background4.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  cursor: default; }
+
+/* line 15, E:/IT/Websites/_studia/scss/style/style.scss */
+textarea {
+  background: rgba(170, 170, 170, 0.8);
+  border: 1px solid white;
+  height: 200px;
+  max-height: 400px;
+  min-height: 100px;
+  min-width: 200px;
+  overflow-y: scroll;
+  padding: 5px;
+  resize: vertical;
+  width: 400px;
+  color: white;
+  font-size: 20px;
+  font-family: Calibri;
+  font-style: normal; }
+
+/* line 30, E:/IT/Websites/_studia/scss/style/style.scss */
+#container {
+  background: rgba(219, 219, 219, 0.2);
+  border-radius: 20px;
+  margin: 50px;
+  padding: 10px 40px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 40, E:/IT/Websites/_studia/scss/style/style.scss */
+.content {
+  background-color: rgba(170, 170, 170, 0.8);
+  border: 1px solid white;
+  border-radius: 9.6px;
+  margin: 30px 0;
+  padding: 19px;
+  width: 960px; }
+  /* line 48, E:/IT/Websites/_studia/scss/style/style.scss */
+  .content .title {
+    border-bottom: 3px double white;
+    display: block;
+    padding: 0 0 5px 25px;
+    color: white;
+    font-size: 40px;
+    font-family: Calibri;
+    font-style: normal;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px  1px 0 #000, 1px  1px 0 #000; }
+  /* line 56, E:/IT/Websites/_studia/scss/style/style.scss */
+  .content .js-content {
+    display: block;
+    margin-top: 15px;
+    overflow: hidden;
+    color: white;
+    font-size: 22px;
+    font-family: Calibri;
+    font-style: normal; }
+  /* line 64, E:/IT/Websites/_studia/scss/style/style.scss */
+  .content .comment {
+    border-top: 1px solid white;
+    display: block;
+    margin-top: 19px;
+    padding: 10px 0 10px 0;
+    color: #FAFAFA;
+    font-size: 18px;
+    font-family: Calibri;
+    font-style: normal; }
+
+/* line 74, E:/IT/Websites/_studia/scss/style/style.scss */
+#clock {
+  background-color: rgba(170, 170, 170, 0.8);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 19px;
+  position: fixed;
+  right: 40px;
+  color: white;
+  font-size: 17px;
+  font-family: Calibri;
+  font-style: normal; }
+
+/* line 85, E:/IT/Websites/_studia/scss/style/style.scss */
+.clickyButton {
+  background-color: rgba(170, 170, 170, 0.8);
+  border: 1px solid white;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 15px;
+  transition: 0.2s; }
+  /* line 93, E:/IT/Websites/_studia/scss/style/style.scss */
+  .clickyButton:hover {
+    cursor: pointer;
+    filter: invert(100%);
+    transition: 0.2s; }
+
+/* line 102, E:/IT/Websites/_studia/scss/style/style.scss */
+.first #input_1 {
+  min-height: 200px;
+  height: 200px; }
+
+/* line 107, E:/IT/Websites/_studia/scss/style/style.scss */
+.first .hold {
+  display: inline-block;
+  margin-left: 15px;
+  width: 50%; }
+  /* line 112, E:/IT/Websites/_studia/scss/style/style.scss */
+  .first .hold #selectP {
+    wifth: 50px;
+    color: white;
+    font-size: 20px;
+    font-family: Calibri;
+    font-style: normal; }
+
+/* line 118, E:/IT/Websites/_studia/scss/style/style.scss */
+.first .clickyButton {
+  margin: 1px;
+  float: left;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 124, E:/IT/Websites/_studia/scss/style/style.scss */
+.first #pContainer {
+  margin-top: 10px; }
+  /* line 127, E:/IT/Websites/_studia/scss/style/style.scss */
+  .first #pContainer .normalLine {
+    margin-left: 5px; }
+    /* line 130, E:/IT/Websites/_studia/scss/style/style.scss */
+    .first #pContainer .normalLine:hover {
+      cursor: text; }
+  /* line 135, E:/IT/Websites/_studia/scss/style/style.scss */
+  .first #pContainer .selectedLine {
+    text-decoration: underline;
+    text-decoration-color: chartreuse; }
+
+/* line 144, E:/IT/Websites/_studia/scss/style/style.scss */
+.second .calcInput {
+  background-color: rgba(170, 170, 170, 0.8);
+  border: 1px solid white;
+  text-align: right;
+  width: 120px;
+  color: white;
+  font-size: 40px;
+  font-family: Calibri;
+  font-style: normal;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px  1px 0 #000, 1px  1px 0 #000; }
+
+/* line 152, E:/IT/Websites/_studia/scss/style/style.scss */
+.second .clickyButton {
+  position: relative;
+  left: 15px;
+  text-align: center;
+  width: 30px;
+  color: white;
+  font-size: 25px;
+  font-family: Calibri;
+  font-style: normal; }
+
+/* line 160, E:/IT/Websites/_studia/scss/style/style.scss */
+.second #calcResultP {
+  margin-top: 20px;
+  color: white;
+  font-size: 35px;
+  font-family: Calibri;
+  font-style: normal;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px  1px 0 #000, 1px  1px 0 #000; }
+
+/* line 165, E:/IT/Websites/_studia/scss/style/style.scss */
+.second #calcResult {
+  color: white;
+  font-size: 40px;
+  font-family: Calibri;
+  font-style: normal; }
+
+/* line 171, E:/IT/Websites/_studia/scss/style/style.scss */
+.third .div3_controls {
+  height: 75px;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 176, E:/IT/Websites/_studia/scss/style/style.scss */
+  .third .div3_controls .div_3_nav_wrapper {
+    display: inline-block;
+    float: left;
+    height: inherit;
+    width: 75px; }
+  /* line 183, E:/IT/Websites/_studia/scss/style/style.scss */
+  .third .div3_controls .div_3_nav {
+    height: 25px;
+    float: left;
+    line-height: 25px;
+    text-align: center;
+    width: 25px; }
+  /* line 191, E:/IT/Websites/_studia/scss/style/style.scss */
+  .third .div3_controls .arr {
+    color: #EEE; }
+    /* line 194, E:/IT/Websites/_studia/scss/style/style.scss */
+    .third .div3_controls .arr:hover {
+      color: #FFF;
+      cursor: pointer;
+      transition: 0.1s;
+      transform: scale(1.2); }
+  /* line 202, E:/IT/Websites/_studia/scss/style/style.scss */
+  .third .div3_controls .div3_colour_controls_wrapper {
+    display: inline-block;
+    float: right;
+    height: inherit;
+    width: 375px; }
+    /* line 208, E:/IT/Websites/_studia/scss/style/style.scss */
+    .third .div3_controls .div3_colour_controls_wrapper .div_3_colour_button {
+      border: 1px solid white;
+      float: right;
+      height: 40px;
+      line-height: 40px;
+      margin: 5px;
+      padding: 5px;
+      text-align: center;
+      width: 40px;
+      color: #eee;
+      font-size: 40px;
+      font-family: Calibri;
+      font-style: normal; }
+      /* line 220, E:/IT/Websites/_studia/scss/style/style.scss */
+      .third .div3_controls .div3_colour_controls_wrapper .div_3_colour_button:hover {
+        color: #FFF;
+        cursor: pointer;
+        transition: 0.40s;
+        filter: invert(85%); }
+    /* line 228, E:/IT/Websites/_studia/scss/style/style.scss */
+    .third .div3_controls .div3_colour_controls_wrapper #vanish {
+      transition: 1s; }
+
+/* line 234, E:/IT/Websites/_studia/scss/style/style.scss */
+.third #div3_wrapper {
+  border: 1px solid white;
+  height: 672px;
+  margin-top: 15px;
+  overflow: hidden;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 244, E:/IT/Websites/_studia/scss/style/style.scss */
+  .third #div3_wrapper #div3 {
+    background-color: transparent;
+    border: 3px dashed white;
+    height: 166px;
+    left: 250px;
+    max-height: 250px;
+    max-width: 250px;
+    min-height: 100px;
+    min-width: 100px;
+    position: relative;
+    top: 250px;
+    transition: 0.5s;
+    width: 166px; }
+
+/*# sourceMappingURL=../../css/style/style.map */
